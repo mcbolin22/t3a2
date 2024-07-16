@@ -27,6 +27,7 @@ Any and all sports enthusiasts that just want to connect through their love of s
 ## Dataflow Diagram
 
 ## Application Architecture Diagram
+![AAD](./docs/AAD.png)
 
 ## User Stories
 
