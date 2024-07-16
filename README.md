@@ -22,9 +22,13 @@ Any and all sports enthusiasts that just want to connect through their love of s
 - Python (ESPN web scrapper bot)
 - Monday.com
 - Figma
+- Draw.io
 
 
 ## Dataflow Diagram
+![DFD1](./docs/DFD1.png)
+
+![DFD2](./docs/DFD2.png)
 
 ## Application Architecture Diagram
 ![AAD](./docs/AAD.png)
