@@ -34,9 +34,32 @@ Any and all sports enthusiasts that just want to connect through their love of s
 ![AAD](./docs/AAD.png)
 
 ## User Stories
+### User Story 1 (Revised):
+**Persona:** Sarah, the Anti-Gambling Fan
+
+**What:** Sarah wants to engage with a sports social media platform that is free from gambling advertisements and promotions.
+
+**Why:** Sarah enjoys connecting with other sports fans and discussing games, teams, and athletes. However, she finds gambling ads intrusive and distracting, and they detract from the pure enjoyment of sports for her. She seeks a safe and positive online sports community focused on genuine fan interaction. (Revised to emphasize Sarah's desire for a gambling-free environment)
+
+### User Story 2 (Revised):
+**Persona:** Michael, the Purist Fan
+
+**What:** Michael wants to connect with other sports fans who share his deep passion for the intricacies and strategies of the game, away from the noise of clickbait headlines and sensationalist reporting.
+
+**Why:** Michael enjoys thoughtful discussions about sports tactics, player performances, and the technical aspects of the game. He finds mainstream sports media often focuses on sensational stories and drama to attract viewers, which he finds off-putting. He seeks a community where fans can engage in meaningful conversations about their shared love for the sport itself. (Revised to focus on Michael's desire for in-depth discussions and avoiding clickbait journalism)
+
+### User Story 3 (Revised):
+**Persona:** Alice, the Competitive Fan
+
+**What:** Alice wants to see past poll results and compare them to actual game outcomes to track her prediction accuracy and potentially earn bragging rights among her friends.
+
+**Why:** Alice enjoys the thrill of predicting game winners and using her sports knowledge to gain an edge over her friends. By viewing past poll results and how they align with real-world outcomes, she can analyse her past predictions, identify areas for improvement, and ultimately aim to boast the best track record in her social circle. (Revised to focus on Alice's desire to use past polls for bragging rights and improve her prediction skills)
 
 ## Wireframes
 
 ## Project boards screenshots
 Screenshot 15 Jul 24
 ![Screenshot 15 Jul 24](./docs/Screenshot%202024-07-15%20220159.png)
+
+Screenshot 16 Jul 24
+![Screenshot 16 Jul 24](./docs/Screenshot%202024-07-16%20203336.png)
