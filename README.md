@@ -2,12 +2,12 @@
 
 ## Website Description
 ### Purpose
-The purpose of my web app is to connect sports fans purely based on which sports they follow and which teams they support. As an avid sport enthusiast I find the current platforms aren't so much connecting people as producing content providing no opportunity for people to connect purely from their love of sport and any app already made for each sport is drowning in gambling advertisements and terrible sensationalised journalism.
+The purpose of my web app, BenchWarmer, is to connect sports fans purely based on which sports they follow and which teams they support. As an avid sport enthusiast I find the current platforms aren't so much connecting people as producing content providing no opportunity for people to connect purely from their love of sport and any app already made for each sport is drowning in gambling advertisements and terrible sensationalised journalism.
 
-My app will solve these issues for sports fans by bringing back the simple love of sport shared between fans.
+BenchWarmer will solve these issues for sports fans by bringing back the simple love of sport shared between fans.
 
 ### Functionality
-This app will have a user log in to an account, select which sports they enjoy and any teams they may follow from those sports they've selected. The app will then connect them to other enthusiasts of the sport and allow them to post about upcoming matches and participate in polls on head to head fixtures for bragging rights that will add points to their account if they happen to be correct.
+BenchWarmer will have a user log in to an account, select which sports they enjoy and any teams they may follow from those sports they've selected. BenchWarmer will then connect them to other enthusiasts of the sport and allow them to post about upcoming matches and participate in polls on head to head fixtures for bragging rights that will add points to their account if they happen to be correct.
 
 ### Target audience
 Any and all sports enthusiasts that just want to connect through their love of sport.
@@ -20,9 +20,9 @@ Any and all sports enthusiasts that just want to connect through their love of s
 - Express
 - MongoDB
 - Python (ESPN web scrapper bot)
-- Monday.com
-- Figma
-- Draw.io
+- Monday.com (Project management)
+- Figma (Wireframes)
+- Draw.io (DFD and AAD)
 
 
 ## Dataflow Diagram
@@ -56,6 +56,23 @@ Any and all sports enthusiasts that just want to connect through their love of s
 **Why:** Alice enjoys the thrill of predicting game winners and using her sports knowledge to gain an edge over her friends. By viewing past poll results and how they align with real-world outcomes, she can analyse her past predictions, identify areas for improvement, and ultimately aim to boast the best track record in her social circle. (Revised to focus on Alice's desire to use past polls for bragging rights and improve her prediction skills)
 
 ## Wireframes
+**Signup Page:**
+![Signup Page](./docs/Signup%20Page.png)
+Accessed by default without logging in
+
+**Home Page:**
+![Home Page](./docs/Home%20Page.png)
+Accessed by default after login/signup and by clicking on the BenchWarmer logo
+
+**Profile Page:**
+![Profile Page](./docs/Profile%20Page.png)
+Accessed through clicking on a persons profile
+
+**Settings Page:**
+![Settings Page](./docs/Settings%20Page.png)
+Accessed through the Menu in Tablet/Phone view and Profile Drop Down in Desktop view 
+
+
 
 ## Project boards screenshots
 Screenshot 15 Jul 24
@@ -63,3 +80,6 @@ Screenshot 15 Jul 24
 
 Screenshot 16 Jul 24
 ![Screenshot 16 Jul 24](./docs/Screenshot%202024-07-16%20203336.png)
+
+Screenshot 17 Jul 24
+![Screenshot 17 Jul 24](./docs/Screenshot%202024-07-17%20183527.png)
