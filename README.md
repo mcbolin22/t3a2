@@ -58,19 +58,21 @@ Any and all sports enthusiasts that just want to connect through their love of s
 ## Wireframes
 **Signup Page:**
 ![Signup Page](./docs/Signup%20Page.png)
-Accessed by default without logging in
+- Accessed by default without logging in
+- Pressing submit button takes you to the Home Page
 
 **Home Page:**
 ![Home Page](./docs/Home%20Page.png)
-Accessed by default after login/signup and by clicking on the BenchWarmer logo
+- Accessed by default after login/signup and by clicking on the BenchWarmer logo
+- Profile drop down in the top right corner (or menu in tablet/phone view) will have options to view profile, settings or logout
 
 **Profile Page:**
 ![Profile Page](./docs/Profile%20Page.png)
-Accessed through clicking on a persons profile
+- Accessed through clicking on a persons profile or via dropdown/menu as described above
 
 **Settings Page:**
 ![Settings Page](./docs/Settings%20Page.png)
-Accessed through the Menu in Tablet/Phone view and Profile Drop Down in Desktop view 
+Accessed through the Menu in Tablet/Phone view and Profile Drop Down in Desktop view as described above
 
 
 
@@ -83,3 +85,6 @@ Screenshot 16 Jul 24
 
 Screenshot 17 Jul 24
 ![Screenshot 17 Jul 24](./docs/Screenshot%202024-07-17%20183527.png)
+
+Screenshot 20 Jul 24
+![Screenshot 20 Jul 24](./docs/Screenshot%202024-07-20%20133430.png)
