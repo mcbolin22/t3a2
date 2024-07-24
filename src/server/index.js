@@ -24,5 +24,14 @@ app.use(cors());
 app.use("/assests", express.static(path.join(__dirname, 'public/assests'))); // set dir of where to keep assests
 
 // File storage
-
+// from Multer github repo on how to save files to the site
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, "public/assets");
+    },
+    filename: function (req, file, cb) {
+        cb(null, file.originalname);
+    }
+});
+const upload = multer({ storage });
 
