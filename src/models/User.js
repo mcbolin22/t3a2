@@ -5,12 +5,14 @@ const UserSchema = new mongoose.Schema(
         firstName: {
             type: String,
             required: true,
+            unique: false,
             min: 2,
             max: 50
         },
         lastName: {
             type: String,
             required: true,
+            unique: false,
             min: 2,
             max: 50
         },
@@ -49,3 +51,7 @@ const UserSchema = new mongoose.Schema(
 
     }, {timestamps: true}
 );
+
+const User = mongoose.model("User", UserSchema)
+
+export default User;
