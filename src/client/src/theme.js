@@ -36,7 +36,7 @@ export const themeSettings = (mode) => {
                 // palette for dark mode
                 primary: {
                     dark: colorTokens.laurel[200],
-                    main: colorTokens.laurel[500],
+                    main: colorTokens.laurel[100],
                     light: colorTokens.laurel[800]
                 },
                 neutral: {
@@ -55,14 +55,14 @@ export const themeSettings = (mode) => {
                 primary: {
                     dark: colorTokens.laurel[700],
                     main: colorTokens.laurel[500],
-                    light: colorTokens.laurel[50]
+                    light: colorTokens.laurel[200]
                 },
                 neutral: {
                     dark: colorTokens.malachite[700],
-                    main: colorTokens.malachite[500],
-                    mediumMain: colorTokens.malachite[400],
-                    medium: colorTokens.malachite[300],
-                    light: colorTokens.malachite[50],
+                    main: colorTokens.malachite[600],
+                    mediumMain: colorTokens.malachite[500],
+                    medium: colorTokens.malachite[400],
+                    light: colorTokens.malachite[300],
                 },
                 background: {
                     default: colorTokens.malachite[100],
