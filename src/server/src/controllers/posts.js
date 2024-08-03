@@ -12,8 +12,8 @@ import User from "../models/User.js";
             lastName: user.lastName,
             location: user.location,
             description,
-            userPicturePath: user.picturePath,
-            picturePath,
+            // userPicturePath: user.picturePath,
+            // picturePath,
             likes: {},
             comments: []
         })

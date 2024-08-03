@@ -10,7 +10,7 @@ export const register = async (req, res) => {
             lastName,
             email,
             password,
-            picturePath,
+            // picturePath,
             friends,
             location,
             occupation,
@@ -26,7 +26,7 @@ export const register = async (req, res) => {
             lastName,
             email,
             password: passwordHash,
-            picturePath,
+            // picturePath,
             friends,
             location,
             occupation,
@@ -46,17 +46,27 @@ export const register = async (req, res) => {
 // Logging in
 export const login = async (req, res) => {
     try {
+        console.log(req.body)
         const { email, password } = req.body;
+        console.log(email, password)
         const user = await User.findOne({ email: email });
+        console.log(user)
         if (!user) return res.status(400).json({ msg: "User does not exist. "});
 
+        
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) return res.status(400).json({ msg: "Password is incorrect. "});
 
+        console.log(isMatch)
+
         const token = jwt.sign({ id: user._id }, process.env.JWT_KEY);
+        console.log(`${user}`, `${token}`)
+
         delete user.password;
         res.status(200).json({ token, user });
     }  catch (err) {
+        console.log(err)
         res.status(500).json({ error: err.message });
+
     }
 }

@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import multer from "multer";
+// import multer from "multer";
 import helmet from "helmet";
 import morgan from "morgan";
 import path from "path";
@@ -34,25 +34,28 @@ app.use("/assests", express.static(path.join(__dirname, 'public/assests'))); // 
 
 // File storage
 // from Multer github repo on how to save files to the site
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, "public/assets");
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.originalname);
-    }
-});
+// const storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//         cb(null, "./public/assets");
+//     },
+//     filename: function (req, file, cb) {
+//         cb(null, file.originalname);
+//     }
+// });
 
-const upload = multer({ storage });
+// const upload = multer({ storage });
 
 // Routes with files (picture)
-app.post("/auth/register", upload.single("picture"), register);
-app.post("/posts", verifyToken, upload.single("picture"), createPost);
+// app.post("/auth/register", upload.single("picture"), register);
+// app.post("/posts", verifyToken, upload.single("picture"), createPost);
+app.post("/auth/register", register);
+app.post("/posts", verifyToken, createPost);
 
 //Routes
 app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
+
 
 // Mongoose setup
 const PORT = process.env.PORT || 6001;
