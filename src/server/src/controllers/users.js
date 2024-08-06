@@ -30,43 +30,43 @@ export const getUserFriends = async (req, res) => {
   }
 };
 
-export const getUserSports = async (req, res) => {
-    try {
-      const { id } = req.params;
-      const user = await User.findById(id);
+// export const getUserSports = async (req, res) => {
+//     try {
+//       const { id } = req.params;
+//       const user = await User.findById(id);
   
-      const sports = await Promise.all(
-        user.sports.map((id) => User.findById(id))
-      );
-      const formattedSports = sports.map(
-        ({ _id, firstName, lastName, occupation, location, picturePath }) => {
-          return { _id, firstName, lastName, occupation, location, picturePath };
-        }
-      );
-      res.status(200).json(formattedSports);
-    } catch (err) {
-      res.status(404).json({ message: err.message });
-    }
-  };
+//       const sports = await Promise.all(
+//         user.sports.map((id) => User.findById(id))
+//       );
+//       const formattedSports = sports.map(
+//         ({ _id, firstName, lastName, occupation, location, picturePath }) => {
+//           return { _id, firstName, lastName, occupation, location, picturePath };
+//         }
+//       );
+//       res.status(200).json(formattedSports);
+//     } catch (err) {
+//       res.status(404).json({ message: err.message });
+//     }
+//   };
 
-  export const getUserTeams = async (req, res) => {
-    try {
-      const { id } = req.params;
-      const user = await User.findById(id);
+//   export const getUserTeams = async (req, res) => {
+//     try {
+//       const { id } = req.params;
+//       const user = await User.findById(id);
   
-      const teams = await Promise.all(
-        user.teams.map((id) => User.findById(id))
-      );
-      const formattedTeams = teams.map(
-        ({ _id, firstName, lastName, occupation, location, picturePath }) => {
-          return { _id, firstName, lastName, occupation, location, picturePath };
-        }
-      );
-      res.status(200).json(formattedTeams);
-    } catch (err) {
-      res.status(404).json({ message: err.message });
-    }
-  };
+//       const teams = await Promise.all(
+//         user.teams.map((id) => User.findById(id))
+//       );
+//       const formattedTeams = teams.map(
+//         ({ _id, firstName, lastName, occupation, location, picturePath }) => {
+//           return { _id, firstName, lastName, occupation, location, picturePath };
+//         }
+//       );
+//       res.status(200).json(formattedTeams);
+//     } catch (err) {
+//       res.status(404).json({ message: err.message });
+//     }
+//   };
 
 // update
 export const addRemoveFriend = async (req, res) => {
@@ -100,59 +100,59 @@ export const addRemoveFriend = async (req, res) => {
   }
 };
 
-export const addRemoveSport = async (req, res) => {
-    try {
-      const { id, sportId } = req.params;
-      const user = await User.findById(id);
-      const sport = await User.findById(sportId);
+// export const addRemoveSport = async (req, res) => {
+//     try {
+//       const { id, sportId } = req.params;
+//       const user = await User.findById(id);
+//       const sport = await User.findById(sportId);
   
-      if (user.sport.includes(sportId)) {
-        user.sports = user.sports.filter((id) => id !== sportId);
-      } else {
-        user.sports.push(sportId);
-      }
-      await user.save();
+//       if (user.sport.includes(sportId)) {
+//         user.sports = user.sports.filter((id) => id !== sportId);
+//       } else {
+//         user.sports.push(sportId);
+//       }
+//       await user.save();
   
-      const sports = await Promise.all(
-        user.sports.map((id) => User.findById(id))
-      );
-      const formattedSports = sports.map(
-        ({ _id, firstName, lastName, occupation, location, picturePath }) => {
-          return { _id, firstName, lastName, occupation, location, picturePath };
-        }
-      );
+//       const sports = await Promise.all(
+//         user.sports.map((id) => User.findById(id))
+//       );
+//       const formattedSports = sports.map(
+//         ({ _id, firstName, lastName, occupation, location, picturePath }) => {
+//           return { _id, firstName, lastName, occupation, location, picturePath };
+//         }
+//       );
   
-      res.status(200).json(formattedSports);
-    } catch (err) {
-      res.status(404).json({ message: err.message });
-    }
-  };
+//       res.status(200).json(formattedSports);
+//     } catch (err) {
+//       res.status(404).json({ message: err.message });
+//     }
+//   };
   
-  export const addRemoveTeam = async (req, res) => {
-    try {
-      const { id, teamId } = req.params;
-      const user = await User.findById(id);
-      const team = await User.findById(teamId);
+//   export const addRemoveTeam = async (req, res) => {
+//     try {
+//       const { id, teamId } = req.params;
+//       const user = await User.findById(id);
+//       const team = await User.findById(teamId);
   
-      if (user.team.includes(teamId)) {
-        user.teams = user.teams.filter((id) => id !== teamId);
-      } else {
-        user.teams.push(teamId);
-      }
-      await user.save();
+//       if (user.team.includes(teamId)) {
+//         user.teams = user.teams.filter((id) => id !== teamId);
+//       } else {
+//         user.teams.push(teamId);
+//       }
+//       await user.save();
   
-      const teams = await Promise.all(
-        user.teams.map((id) => User.findById(id))
-      );
-      const formattedTeams = teams.map(
-        ({ _id, firstName, lastName, occupation, location, picturePath }) => {
-          return { _id, firstName, lastName, occupation, location, picturePath };
-        }
-      );
+//       const teams = await Promise.all(
+//         user.teams.map((id) => User.findById(id))
+//       );
+//       const formattedTeams = teams.map(
+//         ({ _id, firstName, lastName, occupation, location, picturePath }) => {
+//           return { _id, firstName, lastName, occupation, location, picturePath };
+//         }
+//       );
   
-      res.status(200).json(formattedTeams);
-    } catch (err) {
-      res.status(404).json({ message: err.message });
-    }
-  };
+//       res.status(200).json(formattedTeams);
+//     } catch (err) {
+//       res.status(404).json({ message: err.message });
+//     }
+//   };
   
