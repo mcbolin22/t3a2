@@ -63,6 +63,7 @@ const Form = () => {
                 body: formData
             }
         ).catch(error => console.log(error));
+
         const savedUser = await savedUserResponse.json();
         onSubmitProps.resetForm();
 

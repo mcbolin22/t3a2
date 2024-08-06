@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-// import multer from "multer";
+import multer from "multer";
 import helmet from "helmet";
 import morgan from "morgan";
 import path from "path";
@@ -16,57 +16,54 @@ import { createPost } from "./controllers/posts.js";
 import { verifyToken } from "./middleware/auth.js";
 import User from "./models/User.js";
 import Post from "./models/Post.js";
-import { users, posts } from "./data/index.js"
+import { users, posts } from "./data/index.js";
 
-// CONFIG (runs between)
+// config
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(helmet());
-app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin"}));
+app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
-app.use("/assests", express.static(path.join(__dirname, 'public/assests'))); // set dir of where to keep assests
+app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
-// File storage
-// from Multer github repo on how to save files to the site
-// const storage = multer.diskStorage({
-//     destination: function (req, file, cb) {
-//         cb(null, "./public/assets");
-//     },
-//     filename: function (req, file, cb) {
-//         cb(null, file.originalname);
-//     }
-// });
+// file storage
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "public/assets");
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname);
+  },
+});
+const upload = multer({ storage });
 
-// const upload = multer({ storage });
+// routes WITH files
+app.post("/auth/register", upload.single("picture"), register);
+app.post("/posts", verifyToken, upload.single("picture"), createPost);
 
-// Routes with files (picture)
-// app.post("/auth/register", upload.single("picture"), register);
-// app.post("/posts", verifyToken, upload.single("picture"), createPost);
-app.post("/auth/register", register);
-app.post("/posts", verifyToken, createPost);
-
-//Routes
+// routes
 app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 
-
-// Mongoose setup
-const PORT = process.env.PORT || 6001;
-mongoose.connect(process.env.MONGO_URL, {
+// mongoose setup
+const PORT = process.env.PORT || 3001;
+mongoose
+  .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-}).then(() => {
+  })
+  .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 
-    // // Only add data one time!
+    // If using the app for the first time uncomment the following 2 lines and run server to populate the database. BE SURE TO COMMENT OUT ONCE DATA HAS SEEDED
     // User.insertMany(users);
     // Post.insertMany(posts);
-
-}).catch((error) => console.log(`${error} did not connect`));
+  })
+  .catch((error) => console.log(`${error} did not connect`));
