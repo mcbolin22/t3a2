@@ -24,6 +24,10 @@ export const colorTokens = {
         800: "#059722",
         900: "#037119",
         950: "#035d15",
+    },
+    text: {
+        50: "#FFFFFF",
+        950: "#000000"
     }
 };
 
@@ -49,6 +53,9 @@ export const themeSettings = (mode) => {
                 background: {
                     default: colorTokens.malachite[900],
                     alt: colorTokens.malachite[800]
+                },
+                text: {
+                    default: colorTokens.text[50]
                 }
             } : {
                 // palette for light mode
@@ -67,35 +74,38 @@ export const themeSettings = (mode) => {
                 background: {
                     default: colorTokens.malachite[100],
                     alt: colorTokens.malachite[50]
+                },
+                text: {
+                    default: colorTokens.text[950]
                 }    
             })
         },
         typography: {
             fontFamily: ["Teko", "sans-serif"].join(","),
-            fontSize: 12,
+            fontSize: 16,
             h1: {
                 fontFamily: ["Teko", "sans-serif"].join(","),
-                fontSize: 40,
+                fontSize: 44,
             },
             h2: {
                 fontFamily: ["Teko", "sans-serif"].join(","),
-                fontSize: 32,
+                fontSize: 36,
             },
             h3: {
                 fontFamily: ["Teko", "sans-serif"].join(","),
-                fontSize: 24,
+                fontSize: 28,
             },
             h4: {
                 fontFamily: ["Teko", "sans-serif"].join(","),
-                fontSize: 20,
+                fontSize: 24,
             },
             h5: {
                 fontFamily: ["Teko", "sans-serif"].join(","),
-                fontSize: 16,
+                fontSize: 20,
             },
             h6: {
                 fontFamily: ["Teko", "sans-serif"].join(","),
-                fontSize: 14,
+                fontSize: 18,
             },
         }
     };

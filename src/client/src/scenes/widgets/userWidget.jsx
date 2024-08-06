@@ -1,6 +1,5 @@
 import {
     ManageAccountsOutlined,
-    EditOutlined,
     LocationOnOutlined,
     WorkOutlineOutlined,
   } from "@mui/icons-material";
@@ -18,8 +17,7 @@ import {
     const navigate = useNavigate();
     const token = useSelector((state) => state.token);
     const dark = palette.neutral.dark;
-    const medium = palette.neutral.medium;
-    const main = palette.neutral.main;
+    const text = palette.text.default;
 
     const getUser = async () => {
         const response = await fetch(`http://localhost:3001/users/${userId}`,
@@ -49,8 +47,6 @@ import {
         viewedProfile,
         braggingRights,
         impressions,
-        sports,
-        teams,
         friends,
     } = user;
 
@@ -78,7 +74,7 @@ import {
                         >
                             {firstName} {lastName}
                         </Typography>
-                        <Typography color={medium}>{friends.length} friends</Typography>
+                        <Typography color={text}>{friends.length} friends</Typography>
                     </Box>
                     
                 </FlexBetween>
@@ -90,28 +86,30 @@ import {
             {/* second row */}
             <Box p="1rem 0">
                 <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
-                    <LocationOnOutlined fontSize="large" sx={{ color: main }} />
-                    <Typography color={medium}>{location}</Typography>
+                    <LocationOnOutlined fontSize="large" sx={{ color: text }} />
+                    <Typography color={text}>{location}</Typography>
                 </Box>
                 <Box display="flex" alignItems="center" gap="1rem" >
-                    <WorkOutlineOutlined fontSize="large" sx={{ color: main }} />
-                    <Typography color={medium}>{occupation}</Typography>
+                    <WorkOutlineOutlined fontSize="large" sx={{ color: text }} />
+                    <Typography color={text}>{occupation}</Typography>
                 </Box>
             </Box>
+
+            <Divider />
 
             {/* third row */}
             <Box p="1rem 0">
                 <FlexBetween mb="0.5rem">
-                    <Typography color={medium}>Who's viewed your profile?</Typography>
-                    <Typography color={medium} fontWeight="500">{viewedProfile}</Typography>
+                    <Typography color={text}>Who's viewed your profile?</Typography>
+                    <Typography color={text} fontWeight="500">{viewedProfile}</Typography>
+                </FlexBetween>
+                <FlexBetween mb="0.5rem">
+                    <Typography color={text}>Bragging Rights:</Typography>
+                    <Typography color={text} fontWeight="500">{braggingRights}</Typography>
                 </FlexBetween>
                 <FlexBetween>
-                    <Typography color={medium}>Your "Bragging Rights":</Typography>
-                    <Typography color={medium} fontWeight="500">{braggingRights}</Typography>
-                </FlexBetween>
-                <FlexBetween>
-                <Typography color={medium}>Impressions on your posts:</Typography>
-                <Typography color={medium} fontWeight="500">{impressions}</Typography>
+                <Typography color={text}>Impressions on posts:</Typography>
+                <Typography color={text} fontWeight="500">{impressions}</Typography>
                 </FlexBetween>
 
             </Box>
