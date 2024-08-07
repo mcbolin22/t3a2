@@ -69,7 +69,7 @@ const Form = () => {
         method: "POST",
         body: formData,
       }
-    );
+    ).catch(error => console.log("/auth/register error:\n", error));
     const savedUser = await savedUserResponse.json();
     onSubmitProps.resetForm();
 
