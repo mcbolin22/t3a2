@@ -18,13 +18,12 @@ function App() {
     <div className="app">
       <BrowserRouter>
         <ThemeProvider theme={theme}>
-          <CssBaseline>
+          <CssBaseline />
             <Routes>
               <Route path="/" element={<LoginPage />} />
               <Route path="/home" element={isAuth ? <HomePage /> : <Navigate to="/" />} />
               <Route path="/profile/:userId" element={isAuth ? <ProfilePage /> : <Navigate to="/" />} />
             </Routes>
-          </CssBaseline>
         </ThemeProvider>
       </BrowserRouter>
     </div>

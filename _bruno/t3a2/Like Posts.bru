@@ -1,0 +1,27 @@
+meta {
+  name: Like Posts
+  type: http
+  seq: 6
+}
+
+get {
+  url: http://localhost:3001/posts/
+  body: json
+  auth: bearer
+}
+
+headers {
+  JWT_KEY: 'secretKey'
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2YWRiZDIwOTQ0NjI3NDlhNmMzNWRiMyIsImlhdCI6MTcyMjkyNjA1NH0.mzEemaQOxZbCnWlEVZZXxlBuJJfN1NwdVnDSv8ULH8k
+}
+
+body:json {
+  {
+    "email": "fake@fake.com",
+    "password": "$2b$10$pmeimPptl0AbPwsgsFXz/ueAGDK5RJDsc5EnTg.T1Z8Rtu6tNRn9S",
+    "JWT_KEY": "secretKey"
+  }
+}
