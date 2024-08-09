@@ -30,6 +30,7 @@ import { ChatBubbleOutlineOutlined, FavoriteBorderOutlined, FavoriteOutlined, Sh
     const { palette } = useTheme();
     const main = palette.neutral.main;
     const primary = palette.primary.main;
+    const text = palette.text.default;
   
     const patchLike = async () => {
       const response = await fetch(`http://localhost:3001/posts/${postId}/like`, 
@@ -54,7 +55,7 @@ import { ChatBubbleOutlineOutlined, FavoriteBorderOutlined, FavoriteOutlined, Sh
           subtitle={location}
           userPicturePath={userPicturePath}
         />
-        <Typography color={main} sx={{ mt: "1rem" }}>
+        <Typography color={text} sx={{ mt: "1rem" }}>
           {description}
         </Typography>
         {picturePath && (
