@@ -97,7 +97,7 @@ export const users = [
     password: "$2b$10$dsasdgsagasda//G9JxQ4bQ8KXf4OAIe/X/AK9skyWUy",
     picturePath: "p5.jpeg",
     friends: [],
-    location: "Tucson, AZ",
+    location: "Kansas City, MO",
     occupation: "Hacker",
     sports: [],
     teams: [],
@@ -174,8 +174,8 @@ export const posts = [
     firstName: "Steve",
     lastName: "Roach",
     location: "New York, NY",
-    description: "Some really long random description",
-    picturePath: "post1.jpeg",
+    description: "Shout out to the best dressed champions of 2009",
+    picturePath: "yankees.jpeg",
     userPicturePath: "p3.jpeg",
     likes: new Map([
       [userIds[0], true],
@@ -184,9 +184,9 @@ export const posts = [
       [userIds[4], true],
     ]),
     comments: [
-      "random comment",
-      "another random comment",
-      "yet another random comment",
+      "You may not win but you still look good!",
+      "Most iconic look in baseball",
+      "Come back and let us know when you start winning again",
     ],
   },
   {
@@ -196,8 +196,8 @@ export const posts = [
     lastName: "Jones",
     location: "Dallas, TX",
     description:
-      "Another really long random description. This one is longer than the previous one.",
-    picturePath: "post2.jpeg",
+      "Still dreaming of our rangers! They did us proud!",
+    picturePath: "rangers.jpeg",
     userPicturePath: "p6.jpeg",
     likes: new Map([
       [userIds[7], true],
@@ -206,10 +206,10 @@ export const posts = [
       [userIds[2], true],
     ]),
     comments: [
-      "one more random comment",
-      "and another random comment",
-      "no more random comments",
-      "I lied, one more random comment",
+      "Great photo!",
+      "Where'd you find this?",
+      "Howdy Partners!",
+      "Wonder if they can go back to back!",
     ],
   },
   {
@@ -217,10 +217,10 @@ export const posts = [
     userId: userIds[4],
     firstName: "Jane",
     lastName: "Smith",
-    location: "Tucson, AZ",
+    location: "Kansas City, MO",
     description:
-      "This is the last really long random description. This one is longer than the previous one.",
-    picturePath: "post3.jpeg",
+      "Nothing to see here just the greatest football team of the modern age.",
+    picturePath: "chiefs.jpeg",
     userPicturePath: "p5.jpeg",
     likes: new Map([
       [userIds[1], true],
@@ -229,11 +229,11 @@ export const posts = [
       [userIds[5], true],
     ]),
     comments: [
-      "one more random comment",
-      "I lied, one more random comment",
-      "I lied again, one more random comment",
-      "Why am I doing this?",
-      "I'm bored",
+      "We almost had you guys!",
+      "What a run! What a title!",
+      "That QB you have is something else!",
+      "I wonder if they can stop showing Taylor Swift during the game!",
+      "YEAH LETS GO FOR A THREE-PEAT!",
     ],
   },
   {
@@ -243,8 +243,8 @@ export const posts = [
     lastName: "Dunn",
     location: "Los Angeles, CA",
     description:
-      "This is the last really long random description. This one is longer than the previous one. Man I'm bored. I'm going to keep typing until I run out of things to say.",
-    picturePath: "post4.jpeg",
+      "Glad Lebron got one final championship title before his accident <3 RIP GOAT",
+    picturePath: "lakers.jpeg",
     userPicturePath: "p7.jpeg",
     likes: new Map([
       [userIds[1], true],
@@ -252,12 +252,12 @@ export const posts = [
       [userIds[3], true],
     ]),
     comments: [
-      "I lied again, one more random comment",
-      "Why am I doing this?",
-      "I'm bored",
-      "I'm still bored",
-      "All I want to do is play video games",
-      "I'm going to play video games",
+      "Will always live on in our memories",
+      "What a great photo!",
+      "Yeah I'm glad he did too.",
+      "Still so sad what happened to him and his daughter.",
+      "Hope their family is doing well",
+      "GOAT confirmed",
     ],
   },
   {
@@ -267,8 +267,8 @@ export const posts = [
     lastName: "Vowel",
     location: "Chicago, IL",
     description:
-      "Just a short description. I'm tired of typing. I'm going to play video games now.",
-    picturePath: "post5.jpeg",
+      "Greatest moment in film history! GO CUBBIES!",
+    picturePath: "cubbies.jpeg",
     userPicturePath: "p8.jpeg",
     likes: new Map([
       [userIds[1], true],
@@ -277,11 +277,11 @@ export const posts = [
       [userIds[7], true],
     ]),
     comments: [
-      "I lied again, one more random comment",
-      "Why am I doing this?",
-      "Man I'm bored",
-      "What should I do?",
-      "I'm going to play video games",
+      "I think maybe one of the writers was a fan?",
+      "Crazy that this pretty much happened in real life!",
+      "Man I love that movie!",
+      "One of the all time greats",
+      "Too bad they havent won anything before or since LOL",
     ],
   },
   {
@@ -291,8 +291,8 @@ export const posts = [
     lastName: "Dunn",
     location: "Washington, DC",
     description:
-      "For the last time, I'm going to play video games now. I'm tired of typing. I'm going to play video games now.",
-    picturePath: "post6.jpeg",
+      "Feels like a lifetime ago our boys took home the Stanley Cup",
+    picturePath: "capitals.jpeg",
     userPicturePath: "p9.jpeg",
     likes: new Map([
       [userIds[1], true],
@@ -300,11 +300,11 @@ export const posts = [
     ]),
 
     comments: [
-      "Can I play video games now?",
-      "No let's actually study",
-      "Never mind, I'm going to play video games",
-      "Stop it.",
-      "Michael, stop it.",
+      "Pre Covid times wow!",
+      "Crazy how much has changed since then",
+      "Great team, great photo!",
+      "Too bad Canada still hasn't brought it home since then haha",
+      "Uncalled for eh!",
     ],
   },
 ];
